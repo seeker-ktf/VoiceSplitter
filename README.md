@@ -123,13 +123,17 @@ output_folder/
 
 2. If you are specifically trying to get voice models for TTS  or MiniMax H3 cloning, remember that the more audio you have, the better. The MiniMax H3 documentation suggests between 10 seconds and **5 minutes** of audio for proper voice cloning. You can have too much, but it's hard.
 
-3. Once you have all the clips in your destination folder, listen to each one and delete the ones you don't like. The VoiceSPlitter doesn't get everything right every time. This step is important.
+3. The min/max number of speakers can be tricky. If you know exactly the number of speakers set the min&max to the same number. If it thinks it has found an extra voice it will smash them together into one folder, so sometimes it works better to give it an extra voice to allow and then scavenge through the folder to sort them into the right ones. This can happen when there are a lot of female voices that all sound very similar.
 
-4. While this can use just about any media, the best input you can have is a good audio version of studio interview/podcast or audio book. For non-celebs, try to use the best recording setup you can. Anything like hiss or echoes will show up on the clone. (Although you can always try cleaning it up with the MelBanRoFormer.)
+4. The fewer voices that it has to understand, the better. It has no problem understanding the difference between Ginger and Mary Ann as long as they are along, but add the professor and the skipper and his little buddy and now it's got a problem and gets the two women confused because it has to understand the difference between 5 voices instead of 2.
 
-5. There is a flag in the config `offline_mode` that is set to yes. It needs to be yes the first time you run this so it can download the models to your huggingface cache. It can be left to yes forever. I noticed that every time I ran the program it was "phoning home" and at some point it started to irritate me so I put in the flag. 
+5. Once you have all the clips in your destination folder, listen to each one and delete the ones you don't like. The VoiceSplitter doesn't get everything right every time. This step is important.
 
-6. I didn't turn off the warning messages. They are fine.  
+6. While this can use just about any media, the best input you can have is a good audio version of studio interview/podcast or audio book. For non-celebs, try to use the best recording setup you can. Anything like hiss or echoes will show up on the clone. (Although you can always try cleaning it up with the MelBanRoFormer.)
+
+7. There is a flag in the config `offline_mode` that is set to yes. It needs to be yes the first time you run this so it can download the models to your huggingface cache. It can be left to yes forever. I noticed that every time I ran the program it was "phoning home" and at some point it started to irritate me so I put in the flag. 
+
+8. I didn't turn off the warning messages. They are fine.  
 
 ## Requirements
 
