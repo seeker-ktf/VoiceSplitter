@@ -127,6 +127,10 @@ output_folder/
 
 4. While this can use just about any media, the best input you can have is a good audio version of studio interview/podcast or audio book. For non-celebs, try to use the best recording setup you can. Anything like hiss or echoes will show up on the clone. (Although you can always try cleaning it up with the MelBanRoFormer.)
 
+5. There is a flag in the config `offline_mode` that is set to yes. It needs to be yes the first time you run this so it can download the models to your huggingface cache. It can be left to yes forever. I noticed that every time I ran the program it was "phoning home" and at some point it started to irritate me so I put in the flag. 
+
+6. I didn't turn off the warning messages. They are fine.  
+
 ## Requirements
 
 - Windows
