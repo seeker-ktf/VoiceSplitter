@@ -18,12 +18,12 @@ Then create an access token at [huggingface.co/settings/tokens](https://huggingf
 
 ### 2. Install
 
-Create a directory (I called mine "VoiceSplitter" in my "AI" directory), then cd to the directory in a command window:
-
 ```
-cd C:\AI\VoiceSplitter
+cd C:\AI
 git clone https://github.com/seeker-ktf/VoiceSplitter
 ```
+
+(Obviously, it doesn't have to be c:\AI.)
 
 From then on, you can continue in the command window or do everything in Windows Explorer.
 
