@@ -22,17 +22,15 @@ Create a directory (I called mine "VoiceSplitter" in my "AI" directory), then cd
 
 ```
 cd C:\AI\VoiceSplitter
-git clone https://github.com/seeker-ktf/ComfyUI-QueueControl.git
+git clone https://github.com/seeker-ktf/VoiceSplitter
 ```
 
-From then on, you can continue in the command window or do everything in windows.
+From then on, you can continue in the command window or do everything in Windows Explorer.
 
 Run `installVoiceSplitter.bat`. This creates a local Python virtual environment and installs all dependencies. I did it this way so none of your other environments python environments get messed up. The tradeoff is that you use more space:
 
 - **venv size:** ~3.2 GB
 - **HuggingFace model cache:** ~1.84 GB (downloaded on first run, stored in `~/.cache/huggingface/`)
-
-
 
 *You will also need ffmpeg installed and in your path variable. It's probably already there but just FYI.
 
