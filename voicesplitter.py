@@ -268,6 +268,18 @@ def main():
         print(f"ERROR: Input file not found: {input_file}")
         sys.exit(1)
 
+    # Check if output folder already exists
+    output_folder = Path(cfg["output_folder"])
+    if output_folder.exists() and any(output_folder.iterdir()):
+        response = input(f"Output folder already exists and is not empty:\n  {output_folder}\nDelete contents and continue? (y/n): ")
+        if response.strip().lower() == 'y':
+            import shutil
+            shutil.rmtree(output_folder)
+            print("Cleared.")
+        else:
+            print("Aborted.")
+            sys.exit(0)
+
     # Load audio (extract from video if needed)
     audio_path, audio_is_temp = load_audio(cfg)
 

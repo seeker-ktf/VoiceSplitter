@@ -18,9 +18,12 @@ Then create an access token at [huggingface.co/settings/tokens](https://huggingf
 
 ### 2. Install
 
+Check the requirements at the bottom before you go any further, so you don't get mad at me if this doesn't work out.
+
 ```
 cd C:\AI
 git clone https://github.com/seeker-ktf/VoiceSplitter
+cd VoiceSplitter
 ```
 
 (Obviously, it doesn't have to be c:\AI.)
@@ -57,6 +60,12 @@ Use single quotes for Windows paths. The `HF_TOKEN` environment variable can be 
 ### 4. Run
 
 From the command line:
+
+```
+call venv\Scripts\activate.bat
+```
+
+From then on, you can run this command over and over.
 
 ```
 python voicesplitter.py --config voicesplitter.yaml
@@ -122,5 +131,6 @@ output_folder/
 
 - Windows
 - NVIDIA GPU with CUDA
+  - Cuda 13 will be installed in the local environment but you will need a cuda 13 compatable driver.
 - Python 3.11+
 - ffmpeg on PATH
